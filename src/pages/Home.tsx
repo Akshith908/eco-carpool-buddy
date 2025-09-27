@@ -104,10 +104,10 @@ const Home = () => {
         <div className="container mx-auto">
           <Card className="nature-gradient p-8 text-center border-0 shadow-xl">
             <CardHeader>
-              <CardTitle className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+              <CardTitle className="text-2xl md:text-3xl font-bold text-black mb-4">
                 Ready to Start Your Eco Journey?
               </CardTitle>
-              <CardDescription className="text-lg text-foreground mb-6">
+              <CardDescription className="text-lg text-black mb-6">
                 Join thousands of commuters making a difference, one ride at a time.
               </CardDescription>
             </CardHeader>
