@@ -71,7 +71,7 @@ const Home = () => {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-              Why Choose EcoCarpool?
+              Why Choose VCEVehichlePool?
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Join our community of environmentally conscious commuters and experience the benefits 

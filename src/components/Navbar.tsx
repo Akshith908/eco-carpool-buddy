@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Car, MapPin, Home, Leaf } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
   const location = useLocation();
@@ -21,7 +22,7 @@ const Navbar = () => {
             <div className="p-2 bg-primary rounded-lg transition-transform group-hover:scale-105">
               <Leaf className="h-5 w-5 text-primary-foreground" />
             </div>
-            <span className="font-bold text-xl text-foreground">EcoCarpool</span>
+            <span className="font-bold text-xl text-foreground">VCEVehichlePool</span>
           </Link>
 
           {/* Navigation Links */}
@@ -42,6 +43,7 @@ const Navbar = () => {
                 <span className="font-medium">{label}</span>
               </Link>
             ))}
+            <ThemeToggle />
           </div>
 
           {/* Mobile Navigation */}
@@ -62,6 +64,7 @@ const Navbar = () => {
                 <Icon className="h-5 w-5" />
               </Link>
             ))}
+            <ThemeToggle />
           </div>
         </div>
       </div>
