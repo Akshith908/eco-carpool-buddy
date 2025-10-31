@@ -5,10 +5,10 @@ import { Car } from 'lucide-react';
 
 interface Ride {
   id: number;
-  driverName: string;
-  phoneNumber: string;
-  seatsAvailable: number;
-  travelTime: 'morning' | 'evening';
+  driver_name: string;
+  phone_number: string;
+  seats_available: number;
+  travel_time: 'morning' | 'evening';
   latitude: number;
   longitude: number;
 }
@@ -36,10 +36,10 @@ const RideMap: React.FC<Props> = ({ rides }) => {
       >
       <Popup>
       <div>
-      <p><strong>Driver:</strong> {ride.driverName}</p>
-      <p><strong>Seats:</strong> {ride.seatsAvailable}</p>
-      <p><strong>Time:</strong> {ride.travelTime}</p>
-      <p><strong>Phone:</strong> <a href={`tel:${ride.phoneNumber}`}>{ride.phoneNumber}</a></p>
+      <p><strong>Driver:</strong> {ride.driver_name}</p>
+      <p><strong>Seats:</strong> {ride.seats_available}</p>
+      <p><strong>Time:</strong> {ride.travel_time}</p>
+      <p><strong>Phone:</strong> <a href={`tel:${ride.phone_number}`}>{ride.phone_number}</a></p>
       </div>
       </Popup>
       </Marker>

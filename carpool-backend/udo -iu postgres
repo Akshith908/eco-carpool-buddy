@@ -1,0 +1,27 @@
+[0;1;32m●[0m postgresql.service - PostgreSQL database server
+     Loaded: loaded (]8;;file://KAR-sLOQ/usr/lib/systemd/system/postgresql.service\/usr/lib/systemd/system/postgresql.service]8;;\; [0;1;32menabled[0m; preset: [0;1;38:5:185mdisabled[0m)
+     Active: [0;1;32mactive (running)[0m since Thu 2025-10-30 17:05:16 IST; 20min ago
+ Invocation: 4df2960bdaac40809530385f4c37aa65
+       Docs: ]8;;man:postgres(1)\man:postgres(1)]8;;\
+   Main PID: 825 (postgres)
+      Tasks: 6[0;38;5;245m (limit: 28224)[0m
+     Memory: 44.1M (peak: 46.3M)
+        CPU: 430ms
+     CGroup: /system.slice/postgresql.service
+             ├─[0;38;5;245m825 /usr/bin/postgres -D /var/lib/postgres/data[0m
+             ├─[0;38;5;245m867 "postgres: checkpointer "[0m
+             ├─[0;38;5;245m868 "postgres: background writer "[0m
+             ├─[0;38;5;245m877 "postgres: walwriter "[0m
+             ├─[0;38;5;245m878 "postgres: autovacuum launcher "[0m
+             └─[0;38;5;245m879 "postgres: logical replication launcher "[0m
+
+Oct 30 17:05:14 KAR-sLOQ systemd[1]: Starting PostgreSQL database server...
+Oct 30 17:05:15 KAR-sLOQ postgres[825]: 2025-10-30 17:05:15.684 IST [825] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 15.2.1 20250813, 64-bit
+Oct 30 17:05:15 KAR-sLOQ postgres[825]: 2025-10-30 17:05:15.684 IST [825] LOG:  listening on IPv6 address "::1", port 5432
+Oct 30 17:05:15 KAR-sLOQ postgres[825]: 2025-10-30 17:05:15.684 IST [825] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+Oct 30 17:05:15 KAR-sLOQ postgres[825]: 2025-10-30 17:05:15.983 IST [825] LOG:  listening on Unix socket "/run/postgresql/.s.PGSQL.5432"
+Oct 30 17:05:16 KAR-sLOQ postgres[869]: 2025-10-30 17:05:16.318 IST [869] LOG:  database system was shut down at 2025-10-30 01:40:25 IST
+Oct 30 17:05:16 KAR-sLOQ postgres[825]: 2025-10-30 17:05:16.802 IST [825] LOG:  database system is ready to accept connections
+Oct 30 17:05:16 KAR-sLOQ systemd[1]: Started PostgreSQL database server.
+Oct 30 17:10:16 KAR-sLOQ postgres[867]: 2025-10-30 17:10:16.889 IST [867] LOG:  checkpoint starting: time
+Oct 30 17:10:16 KAR-sLOQ postgres[867]: 2025-10-30 17:10:16.909 IST [867] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.002 s, total=0.020 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/1E5AFB0, redo lsn=0/1E5AF58
