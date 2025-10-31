@@ -14,6 +14,7 @@ router.get('/', async (req, res) => {
         if (error) throw error;
         res.status(200).json(data);
     } catch (err: any) {
+        console.error("Supabase error details:", err);
         console.error('❌ Error fetching rides:', err.message);
         res.status(500).json({ error: 'Failed to fetch rides' });
     }
