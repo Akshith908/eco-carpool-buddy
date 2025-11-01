@@ -1,24 +1,24 @@
-import express from 'express';
-import cors from 'cors';
-import dotenv from 'dotenv';
-import { testConnection } from './db';
-import ridesRouter from './routes/rides';
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+import { testConnection } from "./db.js";
+import ridesRouter from "./routes/rides.js";
 
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
-
 app.use(cors());
 app.use(express.json());
 
-// ✅ Health check
-app.get('/', (req, res) => res.send('Carpool Backend Running 🚗'));
+// Health check
+app.get("/", (_req, res) => res.send("Carpool Backend Running"));
 
-// ✅ Mount under both routes so frontend & backend always sync
-app.use(['/rides', '/api/rides'], ridesRouter);
+// API routes
+app.use("/api/rides", ridesRouter);
 
-app.listen(PORT, () => {
-    console.log(`✅ Server running on http://localhost:${PORT}`);
-    testConnection();
+// Start server
+const PORT = Number(process.env.PORT) || 5000;
+app.listen(PORT, "0.0.0.0", async () => {
+    console.log(`🚗 Server running on port ${PORT}`);
+    await testConnection();
 });
